@@ -8,27 +8,20 @@
 </head>
 <body>
     <script>
-    function getPrime(num) {
-        let temp = [], result = [];
-        for (let i = 2; ; i++) {
-             let prime = true
-             for (let j = 2; j < i; j++) {
-                  if (i != j && i % j == 0) {
-                       prime = false
-                  }
-             }
-             if (prime) {
-                  result.push(i)
-             }
-             if (result.length == num) {
-                  break;
-             }
+        var batas = prompt("Masukkan batas angka : ");
+        var bilangan;
+
+        for (let i = 1; i <= batas; i++) {
+            bilangan = 0;
+            for (let j = 0; j <= i; j++) {
+                if(i % j == 0){
+                    bilangan = bilangan + 1;
+                }
+            }
+            if (bilangan == 2){
+                document.write(i + "<p>");
+            }
         }
-        return result;
-   }
-
-   console.log(getPrime(4)); // 2, 3, 5, 7
-
-</script>
+    </script>
 </body>
 </html>
